@@ -23,12 +23,6 @@
 }
 
 /* Classes Genéricas */
-.layout-grid {
-    width: 90%;
-    height: 100%;
-    margin: 0 auto;
-    /* border: 1px solid salmon; */
-}
 
 .mostrar-menu {
     left: 0 !important;
@@ -36,6 +30,13 @@
 
 .mostrar-usuarios {
     right: 0 !important;
+}
+
+.layout-grid {
+    /* border: 1px solid salmon; */
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
 }
 
 /* justify content + align items */
@@ -46,9 +47,6 @@
 }
 
 
-body {
-    color: white;
-}
 
 /* Mobile First */
 
@@ -59,7 +57,7 @@ header {
     left: 0;
     width: 100vw;
     height: 60px;
-    z-index: 100;
+    z-index: 20;
     background-color: #1B1426;
 }
 
@@ -68,43 +66,46 @@ header .header-top {
 }
 
 header .header-bottom {
-    height: 60px;
+    height: 100%;
 }
 
-header .logo {
+header .header-bottom img.logo {
     width: 86px;
 }
 
 
 header .header-bottom nav {
-    position: fixed;
-    top: 60px;
-    left: -80vw;
-    z-index: 101;
-    display: flex;
-    flex-direction: column;
-    /* justify-content: space-between; */
-    width: 80vw;
-    height: calc(100vh - 60px);
-    padding-bottom: 20px;
-    background-image: linear-gradient(to right bottom, rgba(27, 20, 38, 0.7), rgba(27, 20, 38, 0.4));
-    backdrop-filter: blur(45px);
+  position: fixed;
+  top:60px;
+  left: -80vw;
+  width: 80vw;
+  height: calc(100vh - 60px);
 
-    transition: left 0.4s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 20px;
+  background-image: linear-gradient(to right bottom, rgba(27, 20, 38, 0.7), rgba(27, 20, 38, 0.4));
+  backdrop-filter: blur(45px);
+
+  transition: left 0.4s;
+
 }
 
 
 header .header-bottom nav>a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
     padding: 30px 0;
     color: white;
+    font-family: inter;
+    font-weight: 400;
     font-size: 15px;
-    font-family: Inter;
+    text-align: center;
     text-decoration: none;
     border-bottom: 2px solid #F9AA01;
+}
+
+header .header-bottom nav>a:hover{
+    background-color: #F9AA01;
 }
 
 header .header-bottom nav a:last-of-type {
@@ -112,33 +113,31 @@ header .header-bottom nav a:last-of-type {
 }
 
 header .header-bottom nav .midias-sociais {
-    position: absolute;
-    bottom: 20px;
-    left: 0;
-    width: 100%;
-
+    /* border: 1px solid red; */
     display: flex;
     justify-content: center;
-    margin-top: 40px;
-    gap: 20px;
+    gap:50px;
+
 }
 
-header .menu-usuarios {
+
+header .header-bottom .menu-usuarios {
     position: fixed;
     top: 60px;
-    right: -20vw;
-    width: 20vw;
+    right: -19vw;
+    width: 19vw;
     height: 170px;
+     background-image: linear-gradient(to right bottom, rgba(27, 20, 38, 0.4));
+     backdrop-filter:blur(45px);
 
-    background-image: linear-gradient(to right bottom, rgba(27, 20, 38, 0.7), rgba(27, 20, 38, 0.4));
-    backdrop-filter: blur(45px);
+     display: flex;
+     flex-direction: column;
+     justify-content: space-evenly;
+     align-items: center;
 
-    transition: right 0.4s;
+     transition: right 0.4s;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
+
 }
 
 
@@ -150,39 +149,37 @@ main {
 
 /* Banner */
 
-main .banner {
+ .banner {
+    width: 100%;
+    height: 606px;
+    padding: 40px 0;
+
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
-    height: 606px;
-    padding-top: 20px;
-    padding-bottom: 40px;
+
+    background-color:rebeccapurple;
     background-image: url(../assets/images/valorant-pergunte-3-scaled\ 1fundo.svg);
-    background-size: cover;
-    background-position: bottom;
-    background-repeat: no-repeat;
+    background-size: contain;
+   background-repeat: no-repeat;
+   background-position: bottom;
+
 }
 
-main .banner h1 {
-    font-family: TitilliumWeb-Black;
+.banner h1 {
+    font-family:'Times New Roman', Times, serif;
     font-size: 40px;
     text-shadow: 0 0 7px #FD4255;
 }
 
-main .banner a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 170px;
-    height: 40px;
-    font-family: TitilliumWeb-Bold;
-    font-size: 24px;
-    color: black;
-    text-decoration: none;
-    background-color: #F9AA01;
-    border-radius: 8px;
+ .banner .botao-sobre{
+   width: 171px;
+   height: 40px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background-color: #1B1426 ;
 }
 
 /* Sessão Jogos */
@@ -197,8 +194,106 @@ main .jogos .jogos-flex {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    align-items: center;
+
 }
 
+/* Footer */
+
+footer {
+    padding-top: 60px;
+    padding-bottom: 30px;
+    box-shadow: inset 0 30px 60px rgba(0, 0, 0, 1);
+    background-image: url(../assets/images/backgroung_footerfundofootermobile.png);
+    background-position: top;
+    background-size: contain;
+}
+
+footer #sobre {
+    width: 100%;
+    height: 304px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+       /* background-color: rgba(250, 128, 114, .3); */
+}
+
+footer #sobre > img 
+{width: 110px;
+
+}
+
+footer #sobre p {
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+
+}
+
+footer #midias-sociais-footer {
+     /* background-color: #FD4255; */
+     width: 100%;
+     display: flex;
+     justify-content: space-between;
+     height: 1530px;
+
+}
+
+/* apagar */
+
+footer .footer-top > div {
+    border: 2px solid white;
+    
+}
+
+footer .footer-top .titulos-footer h3 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 30px;
+}
+
+footer .footer-top .titulos-footer hr {
+    border: 2px solid #F9AA01;
+    width: 112px;
+}
+
+footer .footer-top .menu-footer {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 30px;
+
+}
+
+footer .footer-top .menu-footer li {
+    list-style-type: none;
+    width: 100px;
+    margin-bottom: 20px;
+     /* border: 1px solid #FD4255; */
+
+}
+
+footer .footer-top .menu-footer a {
+    color: white;
+    text-decoration: none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 16px;
+}
+
+footer .footer-top .menu-footer a::before {
+    content: "\2015";
+    margin-right: 10px;
+    color: #F9AA01;
+}
+
+/* Contatos */
+
+footer .footer-top #contatos {
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-top: 20px;
+}
+
+footer .footer-top #contatos p span
 
 /* Tablets >= 768px */
 @media screen and (min-width: 768px) {}

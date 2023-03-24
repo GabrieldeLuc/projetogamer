@@ -148,7 +148,7 @@ header .menu-usuarios {
 main {
     margin-top: 60px;
     height: 687px;
-filter: blur(3px);
+filter: blur(0px);
     background-image: url(../assets/images/Banner_Login.svg);
     
     background-size: contain;
@@ -161,23 +161,6 @@ main .banner {
     border-style:solid ;
     border-color: blue;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /* Desktop >= 1200px*/
